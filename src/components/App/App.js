@@ -10,8 +10,8 @@ function App () {
   useEffect(() => {
     getUrls()
     .then(data => {
-      console.log(data)
-      setUrls(data)
+      console.log(data.urls)
+      setUrls(data.urls)
     })
   }, [])
 
