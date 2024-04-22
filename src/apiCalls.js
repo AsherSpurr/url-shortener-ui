@@ -4,6 +4,7 @@ export const getUrls = () => {
         if(!response.ok) {
           throw new Error('Uh oh')
         }
+        console.log(response.json())
         return response.json()
       })
 }
