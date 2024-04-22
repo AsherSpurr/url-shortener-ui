@@ -21,12 +21,13 @@ function UrlForm({ addUrl }) {
   }
 
   return (
-    <form>
+    <form onSubmit={e => handleSubmit(e)}>
       <input
         type='text'
         placeholder='Title...'
         name='title'
         value={title}
+        required
         onChange={e => setTitle(e.target.value)}
       />
 
@@ -35,10 +36,11 @@ function UrlForm({ addUrl }) {
         placeholder='URL to Shorten...'
         name='url'
         value={urlToShorten}
+        required
         onChange={e => setUrlToShorten(e.target.value)}
       />
 
-      <button onClick={e => handleSubmit(e)}>
+      <button type='submit'>
         Shorten Please!
       </button>
     </form>
